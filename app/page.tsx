@@ -27,7 +27,6 @@ export default function Home() {
               src="/images/author/photo1.jpg" 
               alt="Dr. Lucas Murrey" 
               className="w-full h-full object-cover"
-              onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement.innerHTML = '<span class="flex items-center justify-center h-full text-[#a89274] text-sm">Photo 1</span>'; }}
             />
           </button>
 
@@ -40,7 +39,6 @@ export default function Home() {
               src="/images/author/photo2.jpg" 
               alt="Dr. Lucas Murrey" 
               className="w-full h-full object-cover"
-              onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement.innerHTML = '<span class="flex items-center justify-center h-full text-[#a89274] text-sm">Photo 2</span>'; }}
             />
           </button>
 
@@ -55,7 +53,6 @@ export default function Home() {
               src="/images/books/holderlin.jpg" 
               alt="Hölderlin's Dionysiac Poetry" 
               className="w-full h-full object-cover"
-              onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement.innerHTML = '<span class="flex items-center justify-center h-full text-[#a89274] text-sm">Hölderlin</span>'; }}
             />
           </a>
 
@@ -70,7 +67,6 @@ export default function Home() {
               src="/images/books/nietzsche.jpg" 
               alt="Nietzsche: The Meaning of Earth" 
               className="w-full h-full object-cover"
-              onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement.innerHTML = '<span class="flex items-center justify-center h-full text-[#a89274] text-sm">Nietzsche</span>'; }}
             />
           </a>
 
@@ -85,7 +81,6 @@ export default function Home() {
               src="/images/books/harvard.jpg" 
               alt="Harvard's Program for Dynamic Paralysis" 
               className="w-full h-full object-cover"
-              onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.parentElement.innerHTML = '<span class="flex items-center justify-center h-full text-[#a89274] text-sm">Harvard</span>'; }}
             />
           </a>
         </div>
