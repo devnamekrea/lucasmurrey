@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Crimson+Text:wght@400;600&display=swap');
+
+:root {
+  /* Pierre Jeanneret inspired palette */
+  --jeanneret-cream: #FAF8F3;
+  --jeanneret-warm-white: #F5F2ED;
+  --jeanneret-sand: #E8E2D5;
+  --jeanneret-teak: #C4A373;
+  --jeanneret-walnut: #8B6914;
+  --jeanneret-charcoal: #2C2C2C;
+  --jeanneret-forest: #4A5D3A;
+}
+
+body { 
+  font-family: 'Inter', system-ui, sans-serif; 
+}
+
+.font-serif { 
+  font-family: 'Crimson Text', Georgia, serif; 
+}
+
+/* Custom color classes */
+.bg-cream { background-color: var(--jeanneret-cream); }
+.bg-warm-white { background-color: var(--jeanneret-warm-white); }
+.bg-sand { background-color: var(--jeanneret-sand); }
+.bg-teak { background-color: var(--jeanneret-teak); }
+.bg-walnut { background-color: var(--jeanneret-walnut); }
+.bg-forest { background-color: var(--jeanneret-forest); }
+
+.text-charcoal { color: var(--jeanneret-charcoal); }
+.text-teak { color: var(--jeanneret-teak); }
+.text-walnut { color: var(--jeanneret-walnut); }
+
+.border-sand { border-color: var(--jeanneret-sand); }
+
+.hover\:bg-walnut:hover { background-color: var(--jeanneret-walnut); }
+.hover\:text-teak:hover { color: var(--jeanneret-teak); }
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Component specific styles */
+.book-card {
+  transition: all 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feed-item {
+  transition: all 0.2s ease;
+}
+
+.feed-item:hover {
+  background-color: var(--jeanneret-warm-white);
+}
+
+/* Extend Tailwind with our custom colors */
+@layer utilities {
+  .text-charcoal\/70 { color: rgb(44 44 44 / 0.7); }
+  .text-charcoal\/80 { color: rgb(44 44 44 / 0.8); }
+  .text-charcoal\/60 { color: rgb(44 44 44 / 0.6); }
+  .text-charcoal\/50 { color: rgb(44 44 44 / 0.5); }
+  
+  .bg-cream\/95 { background-color: rgb(250 248 243 / 0.95); }
+  .bg-forest\/90 { background-color: rgb(74 93 58 / 0.9); }
+}

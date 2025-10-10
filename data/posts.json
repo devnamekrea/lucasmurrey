@@ -1,0 +1,39 @@
+[
+  {
+    "id": "dr-murrey-report-aug-2025",
+    "type": "pdf",
+    "title": "Dr. Murrey Report 6 August 2025",
+    "description": "Update on my cases against Facebook \"Are We Dating The Same Guy?\" cyber-terrorists.",
+    "date": "2025-08-06",
+    "pdfUrl": "/documents/dr-murrey-report-aug-2025.pdf",
+    "externalLinks": [
+      {
+        "label": "View on Sickoscoop",
+        "url": "https://sickoscoop.com"
+      }
+    ]
+  },
+  {
+    "id": "light-within-dark",
+    "type": "image",
+    "title": "Light Within Dark",
+    "description": "It's not easy enjoying oneself while battling demons, but I try...",
+    "date": "2025-04-25",
+    "featuredImage": "/images/posts/light-within-dark.jpg",
+    "views": 107
+  },
+  {
+    "id": "open-letter-harvard",
+    "type": "text",
+    "title": "Open Letter to Harvard",
+    "description": "Harvard's Program for Dynamic Paralysis - An Open Letter from April 2025.",
+    "date": "2025-04-28",
+    "pdfUrl": "/documents/harvard-open-letter-2025.pdf",
+    "externalLinks": [
+      {
+        "label": "Archive.org",
+        "url": "https://archive.org"
+      }
+    ]
+  }
+]

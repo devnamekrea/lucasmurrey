@@ -1,0 +1,32 @@
+[
+  {
+    "id": "holderlin-nietzsche",
+    "title": "Hölderlin and Nietzsche",
+    "description": "An exploration of the philosophical connections between two of Germany's most important thinkers.",
+    "coverImage": "/images/books/holderlin-nietzsche.jpg",
+    "publishYear": 2023,
+    "isbn": "",
+    "amazonLink": "",
+    "available": true
+  },
+  {
+    "id": "intelligence-mafia",
+    "title": "Are We Being Murdered By The Same \"Intelligence\" Mafia?",
+    "description": "A critical examination of power structures and their impact on society.",
+    "coverImage": "/images/books/intelligence-mafia.jpg",
+    "publishYear": 2024,
+    "isbn": "",
+    "amazonLink": "",
+    "available": true
+  },
+  {
+    "id": "monetized-unknown",
+    "title": "The Monetized Unknown",
+    "description": "Essays on the commodification of uncertainty in contemporary life.",
+    "coverImage": "/images/books/monetized-unknown.jpg",
+    "publishYear": 2024,
+    "isbn": "",
+    "amazonLink": "",
+    "available": true
+  }
+]
