@@ -2,8 +2,13 @@
 
 import { useState } from 'react';
 
+const ODYSEE_EMBED = 'https://odysee.com/$/embed/@lucasmurrey:9/1-Lucas+Moe:2';
+const ODYSEE_THUMB =
+  'https://thumbnails.odycdn.com/card/s:1280:720/quality:85/plain/https://thumbs.odycdn.com/c3fa63d8657fd74de4c46ac879aa3758.webp';
+
 export default function Home() {
   const [expandedImage, setExpandedImage] = useState<string | null>(null);
+  const [videoOpen, setVideoOpen] = useState(false);
 
   return (
     <main className="min-h-screen bg-[#f5f1e8]">
@@ -83,6 +88,27 @@ export default function Home() {
               className="w-full h-full object-cover"
             />
           </a>
+
+          {/* Video - Expandable (wraps to second row) */}
+          <button
+            onClick={() => setVideoOpen(true)}
+            className="relative w-full aspect-[3/4] bg-[#d9d0c1] rounded-sm overflow-hidden hover:opacity-90 transition-opacity cursor-pointer group"
+            aria-label="Play video: 1 Lucas + Moe"
+          >
+            <img
+              src={ODYSEE_THUMB}
+              alt="1: Lucas + Moe"
+              className="w-full h-full object-cover"
+            />
+            {/* Play button overlay */}
+            <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition-colors group-hover:bg-black/30">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform group-hover:scale-110">
+                <svg viewBox="0 0 24 24" className="ml-1 h-6 w-6 text-black" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </span>
+            </span>
+          </button>
         </div>
         </div>
 
@@ -97,7 +123,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox Modal - Images */}
       {expandedImage && (
         <div 
           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
@@ -115,6 +141,33 @@ export default function Home() {
             className="max-w-full max-h-full object-contain"
             onClick={(e) => e.stopPropagation()}
           />
+        </div>
+      )}
+
+      {/* Lightbox Modal - Video */}
+      {videoOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+          onClick={() => setVideoOpen(false)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors"
+            onClick={() => setVideoOpen(false)}
+          >
+            ×
+          </button>
+          <div
+            className="relative w-full max-w-5xl aspect-video"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <iframe
+              src={ODYSEE_EMBED}
+              className="absolute inset-0 h-full w-full rounded-lg"
+              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              title="1: Lucas + Moe"
+            />
+          </div>
         </div>
       )}
     </main>
