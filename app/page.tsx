@@ -44,9 +44,9 @@ const PAPER = '#f5f5f2';
    Replace each empty string with one line of the poem (the first line follows "from").
    While a line is empty, its "[insert poem here [...]" placeholder is shown. */
 const POEM: string[] = [
-  'thousands of years of bacteria:',
+  'thousands of years of Abrahamic-bacteria:',
   'a small, talentless and necessarily secretive',
-  'group who can only exist',
+  'group of Zionists who can only exist',
   'by virtue of their preeminent toxin:',
   'anonymous money/data',
 ];
