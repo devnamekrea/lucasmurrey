@@ -9,6 +9,8 @@ import { useEffect, useRef } from 'react';
  *   left   – through the hyphen of "spatio-temporal"
  *   right  – the right edge of the text column
  *   bottom – the second line of the poem
+ * On phones (narrower than 768px) it instead takes the right 55% of the column
+ * at the photograph's natural proportions, so it is never squeezed or cut off.
  */
 export default function ScrollPortrait({ src }: { src: string }) {
   const frameRef = useRef<HTMLDivElement>(null);
@@ -27,17 +29,32 @@ export default function ScrollPortrait({ src }: { src: string }) {
 
       const sy = window.scrollY;
       const t = top.getBoundingClientRect().top + sy;
-      const h = hyphen.getBoundingClientRect();
-      const l = (h.left + h.right) / 2;
-      const b = bottom.getBoundingClientRect().bottom + sy;
       const c = content.getBoundingClientRect();
-      const r = c.right - parseFloat(getComputedStyle(content).paddingRight);
+      const cs = getComputedStyle(content);
+      const r = c.right - parseFloat(cs.paddingRight);
+      const contentLeft = c.left + parseFloat(cs.paddingLeft);
+
+      let l: number;
+      let height: number;
+      if (window.innerWidth < 768) {
+        // Phones: the lines wrap, so measuring from the text would squeeze the photo.
+        // Instead use a fixed share of the column at the photo's own proportions (no cropping).
+        const img = imgRef.current;
+        const ratio = img && img.naturalWidth ? img.naturalWidth / img.naturalHeight : 0.84;
+        const w = (r - contentLeft) * 0.55;
+        l = r - w;
+        height = w / ratio;
+      } else {
+        const h = hyphen.getBoundingClientRect();
+        l = (h.left + h.right) / 2;
+        height = bottom.getBoundingClientRect().bottom + sy - t;
+      }
 
       Object.assign(frame.style, {
         top: `${t}px`,
         left: `${l}px`,
         width: `${Math.max(0, r - l)}px`,
-        height: `${Math.max(0, b - t)}px`,
+        height: `${Math.max(0, height)}px`,
         opacity: '1',
       });
       window.dispatchEvent(new Event('portrait-layout'));
@@ -57,6 +74,7 @@ export default function ScrollPortrait({ src }: { src: string }) {
 
     layout();
     settle();
+    imgRef.current?.addEventListener('load', layout);
     document.fonts?.ready.then(layout);
     window.addEventListener('resize', layout);
     window.addEventListener('scroll', onScroll, { passive: true });

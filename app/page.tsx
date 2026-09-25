@@ -488,6 +488,7 @@ export default function Home() {
             <a href={`mailto:${EMAIL}`} className="underline decoration-1 underline-offset-4 decoration-black/30">
               {EMAIL}
             </a>
+            <p className="mt-[1em]">© {new Date().getFullYear()} Dr. Lucas Murrey</p>
           </footer>
         </div>
       </TwoTone>
