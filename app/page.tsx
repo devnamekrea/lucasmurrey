@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import type { Metadata } from 'next';
 import { EB_Garamond } from 'next/font/google';
 import ScrollPortrait from './components/ScrollPortrait';
 import TwoTone from './components/TwoTone';
@@ -10,6 +11,30 @@ const serif = EB_Garamond({
 });
 
 
+/* ---------- Browser tab, search results and link previews ---------- */
+const BLURB =
+  'Dr. Lucas Murrey, Ph.D Yale University. Dionysiac thinker with an abiding interest in the spatio-temporal events of Greek tragedy.';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://www.lucasmurrey.com'),
+  title: 'Dr. Lucas Murrey — Dionysiac thinker',
+  description: BLURB,
+  openGraph: {
+    title: 'Dr. Lucas Murrey — Dionysiac thinker',
+    description: BLURB,
+    url: 'https://lucasmurrey.com/',
+    siteName: 'Dr. Lucas Murrey',
+    type: 'website',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Dr. Lucas Murrey, Dionysiac thinker' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dr. Lucas Murrey — Dionysiac thinker',
+    description: BLURB,
+    images: ['/og-image.png'],
+  },
+};
+
 const EMAIL = 'lucas@namekreator.com';
 const PORTRAIT = '/images/author/portrait.jpg';
 const TITLE = 'Dr. Lucas Murrey, Ph.D Yale University';
@@ -19,9 +44,9 @@ const PAPER = '#f5f5f2';
    Replace each empty string with one line of the poem (the first line follows "from").
    While a line is empty, its "[insert poem here [...]" placeholder is shown. */
 const POEM: string[] = [
-  'thousands of years of Abrahamic-bacteria:',
+  'thousands of years of bacteria:',
   'a small, talentless and necessarily secretive',
-  'group of Zionists who can only exist',
+  'group who can only exist',
   'by virtue of their preeminent toxin:',
   'anonymous money/data',
 ];
