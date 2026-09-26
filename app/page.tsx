@@ -489,7 +489,7 @@ export default function Home() {
             <h2 className="font-normal">Praise &amp; Citations</h2>
             <p>
               from scholars in Classics, Philosophy, Theology, Literary Studies, Romance Studies, Slavic Studies,
-              Sociology and Linguistics; working in English, German, Spanish, Portuguese and Russian; in Europe and North
+              Sociology and Linguistics; working in English, German, French, Greek, Russian, Spanish and Portuguese; in Europe and North
               and South America
             </p>
 
