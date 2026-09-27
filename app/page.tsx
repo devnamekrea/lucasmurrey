@@ -234,7 +234,7 @@ const DISCIPLINES: Discipline[] = [
         author: (
           <>
             Author of{' '}
-            <A href="https://katalog.ub.uni-heidelberg.de/titel/3549551">
+            <A href="https://www.deutsche-digitale-bibliothek.de/item/3S3NEUEP4ASOVZJZ4MC6ILMI7AL52KBO">
               <em>“Frucht des Gewitters”: Zu Hölderlins Dionysos als Gott der Revolution</em>
             </A>{' '}
             and{' '}
