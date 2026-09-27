@@ -382,7 +382,6 @@ const DISCIPLINES: Discipline[] = [
     people: [
       {
         name: 'Vanessa Gubbins',
-        href: 'https://romancestudies.cornell.edu/vanessa-gubbins',
         role: 'Latin American Studies',
         cited: (
           <>
