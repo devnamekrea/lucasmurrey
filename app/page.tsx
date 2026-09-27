@@ -327,7 +327,7 @@ const DISCIPLINES: Discipline[] = [
             Cited with Walter Kaufmann as one of two authorities for the article’s Nietzsche argument; Murrey’s
             reading of the last human is paraphrased and quoted directly (p. 45 of{' '}
             <em>Nietzsche: The Meaning of Earth</em>) in Freitas’s{' '}
-            <A href="https://periodicos.ufam.edu.br/index.php/prisma/article/view/15202">
+           <A href="https://www.academia.edu/123337384/Ser_para_a_Terra_Lugares_da_Ecologia_da_Filosofia_de_Nietzsche_e_Heidegger">
               “Ser-para-a-Terra: Lugares da Ecologia na Filosofia de Nietzsche e Heidegger”
             </A>
             . <em>PRISMA: Revista de Filosofia</em> 6, no. 1 (2024): 216–232. Cited at pp. 219, 220, 221–222 and
