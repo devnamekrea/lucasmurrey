@@ -271,8 +271,11 @@ const DISCIPLINES: Discipline[] = [
             <A href="https://direct.mit.edu/books/book/4454/chapter/190522/Heidegger-s-Black-Night-The-Nachlass-and-Its">
               “Heidegger’s Black Night: The Nachlass and Its Wirkungsgeschichte”
             </A>
-            , from <em>Reading Heidegger’s Black Notebooks 1931–1941</em>, ed. by Ingo Farin and Jeff Malpas
-            (Cambridge, MA: MIT Press, 2016)
+           , from{' '}
+<A href="https://mitpress.mit.edu/9780262535151/reading-heideggers-black-notebooks-19311941/">
+  <em>Reading Heidegger’s Black Notebooks 1931–1941</em>, ed. by Ingo Farin and Jeff Malpas
+  (Cambridge, MA: MIT Press, 2016)
+</A>
           </>
         ),
       },
