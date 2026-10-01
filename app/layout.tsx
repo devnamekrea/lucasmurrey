@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.lucasmurrey.com'),
   title: 'Dr. Lucas Murrey - Author, Philosopher, Cultural Critic',
   description: 'Independent scholar and author exploring the intersections of money, power, and human experience in the modern world.',
   icons: {
@@ -38,10 +40,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-            <body>
+      <body>
         {children}
         <Analytics />
       </body>
+      <GoogleAnalytics gaId="G-X58MX3L03J" />
     </html>
   )
 }
